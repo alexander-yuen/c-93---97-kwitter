@@ -35,7 +35,9 @@ message = message_data['message'];
 like = message_data['like'];
 name_width_tag = "<h4> "+ name +"<img class='user_tick' src='tick.png'></h4>";
 msg_tag = "<h4 class='message_h4'>"+message+"</h4>";
-like_button = "<button class='btn btn-warning' id="+ firebase_message_id +"value="+like+"onclick='updatedLike(this.id)'> ";
+//like_button = "<button class='btn btn-warning' id="+ firebase_message_id +"value="+like+"onclick=updatedLike(this.id)> ";
+like_button ="<button class='btn btn-warning' id="+firebase_message_id+" value="+like+" onclick='updatedLike(this.id)'>";
+
 span_tag = "<span class='glyphicon glyphicon-thumbs-up'>Like: "+like+"</span></button><hr>";
 row = name_width_tag + msg_tag+like_button + span_tag;
 document.getElementById("output").innerHTML += row;
